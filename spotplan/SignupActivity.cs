@@ -5,18 +5,18 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Firebase.Database;
+using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace spotplan
 {
     [Activity(Label = "SignupActivity")]
     public class SignupActivity : Activity
     {
-        // connect to firebase 
-        FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -41,12 +41,23 @@ namespace spotplan
                 EditText email = FindViewById<EditText>(Resource.Id.email_signup);
                 EditText pass = FindViewById<EditText>(Resource.Id.password_signup);
                 var f = fname.Text;
-                addNewUser(f);
+                var l = lname.Text;
+                var em = email.Text;
+                var p = pass.Text;
+                Register(f, l, em, p);
             };
 
-            static void addNewUser(string f)
+            // insert user to firebase realtime-database
+            static void Register(string f, string l, string em, string p)
             {
-
+                // connect to firebase using API (URI)
+                FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
+                
+                // insert
+                firebase.Child("Users").PutAsync(f);
+                firebase.Child("Users").PutAsync(l);
+                firebase.Child("Users").PutAsync(em);
+                firebase.Child("Users").PutAsync(p);
             }
         }
     }

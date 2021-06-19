@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <ImageView
+        android:src="@drawable/spotplan"
+        android:layout_width="193.5dp"
+        android:layout_height="207.0dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/imageView1"
+        android:contentDescription="" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="47.0dp"
+        android:layout_marginTop="50px"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <Button
+            android:text="@string/android_btntxt1"
+            android:layout_width="141.5dp"
+            android:layout_height="49.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/btnlogin_main" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="21.0dp"
+        android:layout_marginTop="50px"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <TextView
+            android:text="@string/android_txt"
+            android:layout_width="190px"
+            android:layout_height="27.0dp"
+            android:id="@+id/text_or"
+            android:textAlignment="center"
+            android:textColor="#333"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46.5dp"
+        android:layout_marginTop="50px"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <Button
+            android:text="@string/android_btntxt2"
+            android:layout_width="141.5dp"
+            android:layout_height="49.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/btnmain_signup" />
+    </RelativeLayout>
+</LinearLayout>

@@ -28,7 +28,7 @@ namespace spotplan
 
             // login btn
             Button btn2 = FindViewById<Button>(Resource.Id.btnlogin_main);
-            btn.Click += (Sender, e) =>
+            btn2.Click += (Sender, e) =>
             {
                 var intent = new Intent(this, typeof(LoginActivity));
                 StartActivity(intent);

@@ -9,10 +9,11 @@
     android:gravity="center_horizontal">
     <ImageView
         android:src="@drawable/spotplan"
-        android:layout_width="match_parent"
-        android:layout_height="114.0dp"
+        android:layout_width="328.0dp"
+        android:layout_height="136.0dp"
         android:minWidth="25px"
         android:minHeight="25px"
+        android:layout_marginTop="30px"
         android:id="@+id/spotplan_logo"
         android:contentDescription=""
         />
@@ -22,7 +23,7 @@
         android:layout_marginTop="50px"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
-        <com.google.android.material.textfield.TextInputLayout
+        <!--<com.google.android.material.textfield.TextInputLayout
             android:id="@+id/fname_signup"
             android:layout_width="305.0dp"
             android:layout_height="41.0dp"
@@ -32,7 +33,14 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>-->
+        <EditText
+            android:id="@+id/fname_signup"
+            android:layout_width="305.0dp"
+            android:layout_height="50.0dp"
+            android:hint="@string/android_inputhint3"
+            android:textSize="33px"
+            android:layout_marginLeft="0.0dp" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -40,7 +48,7 @@
         android:layout_marginTop="50px"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
-        <com.google.android.material.textfield.TextInputLayout
+        <!--<com.google.android.material.textfield.TextInputLayout
             android:id="@+id/lname_signup"
             android:layout_width="305.0dp"
             android:layout_height="41.0dp"
@@ -50,7 +58,14 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>-->
+        <EditText
+            android:id="@+id/lname_signup"
+            android:layout_width="305.0dp"
+            android:layout_height="50.0dp"
+            android:textSize="33px"
+            android:hint="@string/android_inputhint4"
+            android:layout_marginLeft="0.0dp" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -58,7 +73,7 @@
         android:layout_marginTop="50px"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
-        <com.google.android.material.textfield.TextInputLayout
+        <!--<com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_signup"
             android:layout_width="305.0dp"
             android:layout_height="41.0dp"
@@ -68,7 +83,14 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>-->
+        <EditText
+            android:id="@+id/email_signup"
+            android:layout_width="305.0dp"
+            android:layout_height="50.0dp"
+            android:textSize="33px"
+            android:hint="@string/android_inputhint5"
+            android:layout_marginLeft="0.0dp" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -76,7 +98,7 @@
         android:layout_marginTop="50px"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
-        <com.google.android.material.textfield.TextInputLayout
+        <!--<com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password_signup"
             android:layout_width="305.0dp"
             android:layout_height="41.0dp"
@@ -87,12 +109,20 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>-->
+        <EditText
+            android:id="@+id/password_signup"
+            android:layout_width="305.0dp"
+            android:layout_height="50.0dp"
+            android:textSize="33px"
+            android:inputType="textPassword"
+            android:hint="@string/android_inputhint2"
+            android:layout_marginLeft="0.0dp" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50px"
+        android:layout_marginTop="20px"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
         <Button
@@ -115,6 +145,5 @@
             android:minHeight="25px"
             android:textColor="@android:color/holo_blue_light"
             android:id="@+id/text_back" />
-        
     </RelativeLayout>
 </LinearLayout>

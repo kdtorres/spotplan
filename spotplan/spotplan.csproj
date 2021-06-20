@@ -65,11 +65,14 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CryptoActivity.cs" />
+    <Compile Include="LoginActivity.cs" />
+    <Compile Include="LoginModels.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignupActivity.cs" />
-    <Compile Include="UsersModel.cs" />
+    <Compile Include="SignupModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -106,6 +109,9 @@
     <AndroidResource Include="Resources\layout\activity_login.xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml">
+      <Version>2.13.0</Version>
+    </PackageReference>
     <PackageReference Include="FirebaseDatabase.net">
       <Version>4.0.6</Version>
     </PackageReference>

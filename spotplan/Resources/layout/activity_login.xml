@@ -22,7 +22,7 @@
         android:layout_marginTop="50px"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
-        <com.google.android.material.textfield.TextInputLayout
+       <!-- <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/uname_login"
             android:layout_width="305.0dp"
             android:layout_height="58.0dp"
@@ -32,7 +32,13 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>-->
+         <EditText
+            android:id="@+id/uname_login"
+            android:layout_width="305.0dp"
+            android:layout_height="58.0dp"
+            android:hint="@string/android_inputhint5"
+            android:layout_marginLeft="0.0dp" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -40,7 +46,7 @@
         android:layout_marginTop="50px"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
-        <com.google.android.material.textfield.TextInputLayout
+       <!-- <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password_login"
             android:layout_width="305.0dp"
             android:layout_height="58.0dp"
@@ -50,7 +56,14 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>-->
+        <EditText
+            android:id="@+id/password_login"
+            android:layout_width="305.0dp"
+            android:layout_height="58.0dp"
+            android:inputType="textPassword"
+            android:hint="@string/android_inputhint2"
+            android:layout_marginLeft="0.0dp" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -64,5 +77,20 @@
             android:layout_height="wrap_content"
             android:text="@string/android_btntxt1"
             />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <TextView
+            android:text="@string/android_texback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:textColor="@android:color/holo_blue_light"
+            android:id="@+id/text_back" />
     </RelativeLayout>
 </LinearLayout>

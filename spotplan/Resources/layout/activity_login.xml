@@ -10,9 +10,10 @@
     <ImageView
         android:src="@drawable/spotplan"
         android:layout_width="match_parent"
-        android:layout_height="114.0dp"
+        android:layout_height="140.0dp"
         android:minWidth="25px"
         android:minHeight="25px"
+        android:layout_marginTop="50px"
         android:id="@id/spotplan_logo"
         android:contentDescription=""
         />
@@ -36,7 +37,8 @@
          <EditText
             android:id="@+id/uname_login"
             android:layout_width="305.0dp"
-            android:layout_height="58.0dp"
+            android:layout_height="60.0dp"
+            android:textSize="33px"
             android:hint="@string/android_inputhint5"
             android:layout_marginLeft="0.0dp" />
     </RelativeLayout>
@@ -60,8 +62,9 @@
         <EditText
             android:id="@+id/password_login"
             android:layout_width="305.0dp"
-            android:layout_height="58.0dp"
+            android:layout_height="60.0dp"
             android:inputType="textPassword"
+            android:textSize="33px"
             android:hint="@string/android_inputhint2"
             android:layout_marginLeft="0.0dp" />
     </RelativeLayout>

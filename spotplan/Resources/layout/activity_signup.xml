@@ -105,7 +105,6 @@
             android:layout_height="50.0dp"
             android:textSize="33px"
             android:inputType="textEmailAddress"
-            android:hint="someone@example.com"
             android:hint="@string/android_inputhint5"
             android:layout_marginLeft="0.0dp" />
     </RelativeLayout>

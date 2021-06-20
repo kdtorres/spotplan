@@ -10,4 +10,5 @@
    <string name="android_inputhint4">Lastname</string>
   <string name="android_inputhint5">Email</string>
   <string name="android_texback">BACK</string>
+  <string name="android_texterror">* All fields are required.</string>
 </resources>

@@ -23,7 +23,9 @@ namespace spotplan
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from layout resource
             SetContentView(Resource.Layout.activity_signup);
-            
+
+
+            // Create your application here
             // back 
             TextView back = FindViewById<TextView>(Resource.Id.text_back);
             back.Click += (Sender, e) =>
@@ -32,21 +34,30 @@ namespace spotplan
                 StartActivity(intent);
             };
 
+
             // signup button
             Button signup = FindViewById<Button>(Resource.Id.btn_signup);
-            signup.Click += (Sender, e) =>
+            signup.Click += async (Sender, e) =>
             {
                 EditText fname = FindViewById<EditText>(Resource.Id.fname_signup);
                 EditText lname = FindViewById<EditText>(Resource.Id.lname_signup);
                 EditText email = FindViewById<EditText>(Resource.Id.email_signup);
                 EditText pass = FindViewById<EditText>(Resource.Id.password_signup);
+
+                TextView error = FindViewById<TextView>(Resource.Id.text_error);
+
                 string f = fname.Text;
                 string l= lname.Text;
                 string em = email.Text;
                 string p = pass.Text;
+                if(l == string.Empty || l == string.Empty || em == string.Empty || p == string.Empty)
+                {
+                    await Task.Delay(2000);
+                }
                 Register(f, l, em, p);
             };
 
+         
             // register method
             static void Register(string f, string l, string em, string p)
             {
@@ -54,7 +65,7 @@ namespace spotplan
                 FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
 
                 // insert
-                firebase.Child("Users").PutAsync(new UserSignup() { Firstname = f, Lastname = l, Email = em, Password = p });
+                firebase.Child("Users").PutAsync(new SignupModels() { Firstname = f, Lastname = l, Email = em, Password = p });
                 
             }
         }

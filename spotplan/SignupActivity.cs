@@ -40,24 +40,22 @@ namespace spotplan
                 EditText lname = FindViewById<EditText>(Resource.Id.lname_signup);
                 EditText email = FindViewById<EditText>(Resource.Id.email_signup);
                 EditText pass = FindViewById<EditText>(Resource.Id.password_signup);
-                var f = fname.Text;
-                var l = lname.Text;
-                var em = email.Text;
-                var p = pass.Text;
+                string f = fname.Text;
+               string l= lname.Text;
+                string em = email.Text;
+                string p = pass.Text;
                 Register(f, l, em, p);
             };
 
-            // insert user to firebase realtime-database
+            // register method
             static void Register(string f, string l, string em, string p)
             {
                 // connect to firebase using API (URI)
                 FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
-                
+
                 // insert
-                firebase.Child("Users").PutAsync(f);
-                firebase.Child("Users").PutAsync(l);
-                firebase.Child("Users").PutAsync(em);
-                firebase.Child("Users").PutAsync(p);
+                firebase.Child("Users").PutAsync(new UsersModel() { Firstname = f, Lastname = l, Email = em, Password = p });
+                
             }
         }
     }

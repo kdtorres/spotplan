@@ -17,11 +17,20 @@ namespace spotplan
             // Set our view from layout resource
             SetContentView(Resource.Layout.activity_main);
             // Create your application here
+
             // signup btn
             Button btn = FindViewById<Button>(Resource.Id.btnmain_signup);
             btn.Click += (Sender, e) =>
             {
                 var intent = new Intent(this, typeof(SignupActivity));
+                StartActivity(intent);
+            };
+
+            // login btn
+            Button btn2 = FindViewById<Button>(Resource.Id.btnlogin_main);
+            btn.Click += (Sender, e) =>
+            {
+                var intent = new Intent(this, typeof(LoginActivity));
                 StartActivity(intent);
             };
         }

@@ -41,7 +41,7 @@ namespace spotplan
                 EditText email = FindViewById<EditText>(Resource.Id.email_signup);
                 EditText pass = FindViewById<EditText>(Resource.Id.password_signup);
                 string f = fname.Text;
-               string l= lname.Text;
+                string l= lname.Text;
                 string em = email.Text;
                 string p = pass.Text;
                 Register(f, l, em, p);
@@ -54,7 +54,7 @@ namespace spotplan
                 FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
 
                 // insert
-                firebase.Child("Users").PutAsync(new UsersModel() { Firstname = f, Lastname = l, Email = em, Password = p });
+                firebase.Child("Users").PutAsync(new UserSignup() { Firstname = f, Lastname = l, Email = em, Password = p });
                 
             }
         }

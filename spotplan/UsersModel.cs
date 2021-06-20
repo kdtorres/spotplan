@@ -11,10 +11,16 @@ using System.Text;
 
 namespace spotplan
 {
-    class UsersModel
+    class UserSignup
     {
         public string Firstname { get; set; }
         public string Lastname { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
+
+    class UserLogin
+    {
         public string Email { get; set; }
         public string Password { get; set; }
     }

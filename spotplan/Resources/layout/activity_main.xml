@@ -14,7 +14,7 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/imageView1"
-        android:contentDescription="" />
+        android:contentDescription="@string/android_logoname" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="47.0dp"

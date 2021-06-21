@@ -4,11 +4,14 @@
     <string name="android_btntxt1">LOGIN</string>
     <string name="android_txt">OR</string>
     <string name="android_btntxt2">SIGNUP</string>
+    <string name="android_blanktext"></string>
     <string name="android_inputhint1">Username</string>
     <string name="android_inputhint2">Password</string>
     <string name="android_inputhint3">Firstname</string>
-   <string name="android_inputhint4">Lastname</string>
-  <string name="android_inputhint5">Email</string>
-  <string name="android_texback">BACK</string>
-  <string name="android_texterror">* All fields are required.</string>
+    <string name="android_inputhint4">Lastname</string>
+    <string name="android_inputhint5">Email</string>
+    <string name="android_texback">BACK</string>
+    <string name="android_logoname">spotplan</string>
+    <string name="android_emailhint">someone@example.com</string>
+    <string name="android_texterror">* All fields are required.</string>
 </resources>

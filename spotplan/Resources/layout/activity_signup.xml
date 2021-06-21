@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,29 +13,13 @@
         android:layout_height="136.0dp"
         android:minWidth="25px"
         android:minHeight="25px"
-        android:layout_marginTop="30px"
+        android:layout_marginTop="25px"
         android:id="@+id/spotplan_logo"
-        android:contentDescription=""
-        />
+        android:contentDescription="@string/android_logoname"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30px"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal">
-        <TextView
-            android:text="@string/android_texterror"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:textColor="?android:attr/colorError"
-            android:id="@id/text_error" />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10px"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
         <!--<com.google.android.material.textfield.TextInputLayout
@@ -54,8 +38,9 @@
             android:layout_width="305.0dp"
             android:layout_height="50.0dp"
             android:hint="@string/android_inputhint3"
-            android:textSize="33px"
-            android:layout_marginLeft="0.0dp" />
+            android:textSize="25px"
+            android:layout_marginLeft="0.0dp"
+            android:inputType="text" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -78,9 +63,10 @@
             android:id="@+id/lname_signup"
             android:layout_width="305.0dp"
             android:layout_height="50.0dp"
-            android:textSize="33px"
+            android:textSize="25px"
             android:hint="@string/android_inputhint4"
-            android:layout_marginLeft="0.0dp" />
+            android:layout_marginLeft="0.0dp"
+            android:inputType="text" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -103,9 +89,8 @@
             android:id="@+id/email_signup"
             android:layout_width="305.0dp"
             android:layout_height="50.0dp"
-            android:textSize="33px"
+            android:textSize="25px"
             android:inputType="textEmailAddress"
-            android:hint="someone@example.com"
             android:hint="@string/android_inputhint5"
             android:layout_marginLeft="0.0dp" />
     </RelativeLayout>
@@ -131,7 +116,7 @@
             android:id="@+id/password_signup"
             android:layout_width="305.0dp"
             android:layout_height="50.0dp"
-            android:textSize="33px"
+            android:textSize="25px"
             android:inputType="textPassword"
             android:hint="@string/android_inputhint2"
             android:layout_marginLeft="0.0dp" />
@@ -151,7 +136,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5px"
+        android:layout_marginTop="50px"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
         <TextView
@@ -159,6 +144,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="25px"
+            android:textSize="30px"
             android:minHeight="25px"
             android:textColor="@android:color/holo_blue_light"
             android:id="@+id/text_back" />

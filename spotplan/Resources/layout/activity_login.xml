@@ -66,6 +66,7 @@
             android:layout_height="60.0dp"
             android:inputType="textPassword"
             android:textSize="33px"
+            android:theme="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
             android:hint="@string/android_inputhint2"
             android:layout_marginLeft="0.0dp" />
     </RelativeLayout>

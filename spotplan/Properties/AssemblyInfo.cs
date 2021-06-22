@@ -9,7 +9,7 @@ using Android.App;
 [assembly: AssemblyTitle("spotplan")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("kimdavetorres.com")]
 [assembly: AssemblyProduct("spotplan")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]

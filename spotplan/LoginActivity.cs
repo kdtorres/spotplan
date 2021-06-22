@@ -12,7 +12,7 @@ using Xamarin.Essentials;
 
 namespace spotplan
 {
-    [Activity(Label = "LoginActivity")]
+    [Activity(Label = "@string/app_login_heading", Theme = "@style/Theme.MaterialComponents")]
     public class LoginActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

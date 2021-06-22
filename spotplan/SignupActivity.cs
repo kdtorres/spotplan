@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace spotplan
 {
-    [Activity(Label = "SignupActivity")]
+    [Activity(Label = "@string/app_signup_heading", Theme = "@style/Theme.MaterialComponents")]
     public class SignupActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

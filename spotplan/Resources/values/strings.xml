@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_main_heading">Welcome to spotplan</string>
+    <string name="app_login_heading">SpotPlan Login</string>
+    <string name="app_signup_heading">SpotPlan Signup</string>
+    <string name="app_crypt_heading"></string>
     <string name="action_settings">Settings</string>
     <string name="android_btntxt1">LOGIN</string>
     <string name="android_txt">OR</string>

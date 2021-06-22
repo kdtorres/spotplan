@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace spotplan
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_main_heading", Theme = "@style/Theme.MaterialComponents", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

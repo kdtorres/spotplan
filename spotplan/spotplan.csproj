@@ -65,14 +65,15 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crud.cs" />
     <Compile Include="CryptoActivity.cs" />
     <Compile Include="LoginActivity.cs" />
-    <Compile Include="LoginModels.cs" />
+    <Compile Include="LoginAuth.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignupActivity.cs" />
-    <Compile Include="SignupModels.cs" />
+    <Compile Include="Users.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

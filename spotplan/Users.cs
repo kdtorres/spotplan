@@ -11,8 +11,9 @@ using System.Text;
 
 namespace spotplan
 {
-    class SignupModels
+    class Users
     {
+        public Guid UserID { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string Email { get; set; }

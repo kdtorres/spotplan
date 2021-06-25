@@ -65,14 +65,19 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crud.cs" />
     <Compile Include="CryptoActivity.cs" />
+    <Compile Include="Login.cs" />
     <Compile Include="LoginActivity.cs" />
-    <Compile Include="LoginModels.cs" />
+    <Compile Include="LoginAuth.cs" />
+    <Compile Include="LoginModel.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MainContentActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignupActivity.cs" />
-    <Compile Include="SignupModels.cs" />
+    <Compile Include="ThumbnailActivity.cs" />
+    <Compile Include="Users.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -130,6 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_crypto.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_thumbnail.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_content_main.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

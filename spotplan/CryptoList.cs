@@ -11,9 +11,9 @@ using System.Text;
 
 namespace spotplan
 {
-    class LoginModels
+    class CryptoList
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public Guid CryptoID { get; set; }
+        public string CryptoName { get; set; }
     }
 }

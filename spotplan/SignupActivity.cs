@@ -7,11 +7,12 @@ using Android.Widget;
 using AndroidX.AppCompat.App;
 using Firebase.Database;
 using Firebase.Database.Query;
+using System;
 using System.Threading.Tasks;
 
 namespace spotplan
 {
-    [Activity(Label = "@string/app_signup_heading", Theme = "@style/Theme.MaterialComponents")]
+    [Activity(Label = "@string/app_signup_heading", Theme = "@style/AppTheme")]
     public class SignupActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -63,15 +64,18 @@ namespace spotplan
             // register method
             void Register(string f, string l, string em, string p)
             {
-                // connect to firebase using API (URI)
+                // connect to firebase using url
                 FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
 
                 // insert to firebase realtime database
-                firebase.Child("Users").PutAsync(new SignupModels() { Firstname = f, Lastname = l, Email = em, Password = p });
+                firebase.Child("Users").PutAsync(new Users() { UserID = Guid.NewGuid(), Firstname = f, Lastname = l, Email = em, Password = p });
 
                 Toast toast = Toast.MakeText(ApplicationContext, "Successfully signup!", ToastLength.Short);
                 toast.SetGravity(GravityFlags.CenterHorizontal, 0, 0);
                 toast.Show();
+
+                var intent = new Intent(this, typeof(LoginActivity));
+                StartActivity(intent);
             }
         }
     }

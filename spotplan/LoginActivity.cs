@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using AndroidX.AppCompat.App;
 using Android.Views;
 using Xamarin.Essentials;
+using System;
 
 namespace spotplan
 {
-    [Activity(Label = "@string/app_login_heading", Theme = "@style/Theme.MaterialComponents")]
+    [Activity(Label = "@string/app_login_heading", Theme = "@style/AppTheme")]
     public class LoginActivity : AppCompatActivity
     {
+      
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -40,8 +42,9 @@ namespace spotplan
                 EditText email = FindViewById<EditText>(Resource.Id.uname_login);
                 EditText pass = FindViewById<EditText>(Resource.Id.password_login);
 
-                string em = email.Text;
-                string p = pass.Text;
+                LoginModel m = new LoginModel();
+                m.Email = email.Text;
+                m.Password = pass.Text;
 
                 if (email.Text == "" || pass.Text == "")
                 {
@@ -52,10 +55,34 @@ namespace spotplan
                     var intent = new Intent(this, typeof(LoginActivity));
                     await Task.Delay(1000);
                     StartActivity(intent);
+                } 
+                else
+                {
+                    Login l = new Login();
+                    l.LoginUser();
+
+                    LoginModel lm = new LoginModel();
+                    if(lm.flag == false)
+                    {
+                        Toast toast = Toast.MakeText(ApplicationContext, "User doest not exist!", ToastLength.Short);
+                        toast.SetGravity(GravityFlags.CenterHorizontal, 0, 0);
+                        toast.Show();
+
+                        await Task.Delay(1000);
+                        var intent = new Intent(this, typeof(LoginActivity));
+                        StartActivity(intent);
+                    }else
+                    {
+                        Toast toast = Toast.MakeText(ApplicationContext, "Login successfully!", ToastLength.Short);
+                        toast.SetGravity(GravityFlags.CenterHorizontal, 0, 0);
+                        toast.Show();
+
+                        await Task.Delay(1000);
+                        var intent = new Intent(this, typeof(CryptoActivity));
+                        StartActivity(intent);
+                    }
                 }
-
-                 var user = await GetUser(em);
-
+                /* trial code
                 if (user != null)
                 {
                     if (em == user.Email && p == user.Password)
@@ -89,30 +116,31 @@ namespace spotplan
                     var intent = new Intent(this, typeof(LoginActivity));
                     await Task.Delay(1000);
                     StartActivity(intent);
-                }
-               
+                }*/
+
             };
 
-
+            /* trial code
             // get user method
-            static async Task<SignupModels> GetUser(string email)
+            static async Task<Users> GetUser(string email)
             {
                 // connect to firebase using API (URI)
                 FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
-                
+
                 var allUsers = await ListUser();
-                await firebase.Child("Users").OnceAsync<SignupModels>();
+                await firebase.Child("Users").OnceAsync<Users>();
                 return allUsers.Where(a => a.Email == email).FirstOrDefault();
             }
 
 
             // retrieve all users
-            static async Task<List<SignupModels>> ListUser()
+            static async Task<List<Users>> ListUser()
             {
                 // connect to firebase using API (URI)
                 FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
-               
-                var userlist = (await firebase.Child("Users").OnceAsync<SignupModels>()).Select(item => new SignupModels {
+
+                var userlist = (await firebase.Child("Users").OnceAsync<Users>()).Select(item => new Users
+                {
                     Firstname = item.Object.Firstname,
                     Lastname = item.Object.Lastname,
                     Email = item.Object.Email,
@@ -120,25 +148,66 @@ namespace spotplan
                 }).ToList();
 
                 return userlist;
-            }
-            /*
-
-            // login method
-            static async Task<IEnumerable<SignupModels>> LoginUsers(string email, string password)
-            {
-                // connect to firebase using API (URI)
-                FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
-
-                LoginModels l = new LoginModels();
-                l.Email = email;
-                l.Password = password;
-                var e = l.Email;
-                var p = l.Password;
-
-                var allUsers = await ListUser();
-                await firebase.Child("Users").OnceAsync<SignupModels>();
-                return (IEnumerable<SignupModels>)allUsers.Where(a => a.Email == e && a.Password == p).FirstOrDefault();
             }*/
+
+        
+        // get especific users
+        //public async void Login(string email, string password)
+        //{
+        
+            //try
+            //{
+            //    // to firebase realtime database
+            //    FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
+            //    var eu = await LoginAuth.ge();
+            //    await firebase.Child("Users").OnceAsync<Users>();
+            //    eu.Where(a => a.Email == email && a.Password == password).FirstOrDefault();
+
+            //    if(eu != null)
+            //    {
+            //        Toast toast = Toast.MakeText(ApplicationContext, "Login successfully!", ToastLength.Short);
+            //        toast.SetGravity(GravityFlags.CenterHorizontal, 0, 0);
+            //        toast.Show();
+
+            //        await Task.Delay(1000);
+            //        var intent = new Intent(this, typeof(CryptoActivity));
+            //        StartActivity(intent);
+            //    }
+
+            //}
+            //catch
+            //{
+            //    Toast toast = Toast.MakeText(ApplicationContext, "User does not exist!", ToastLength.Short);
+            //    toast.SetGravity(GravityFlags.CenterHorizontal, 0, 0);
+            //    toast.Show();
+
+            //    await Task.Delay(1000);
+            //    var intent = new Intent(this, typeof(LoginActivity));
+            //    StartActivity(intent);
+            //}
+
+
+            //if (user != null)
+            //{
+            //    Toast toast = Toast.MakeText(ApplicationContext, "Login successfully!", ToastLength.Short);
+            //    toast.SetGravity(GravityFlags.CenterHorizontal, 0, 0);
+            //    toast.Show();
+
+            //    await Task.Delay(1000);
+            //    var intent = new Intent(this, typeof(CryptoActivity));
+            //    StartActivity(intent);
+            //} 
+            //else
+            //{
+            //    Toast toast = Toast.MakeText(ApplicationContext, "User doest not exist!", ToastLength.Short);
+            //    toast.SetGravity(GravityFlags.CenterHorizontal, 0, 0);
+            //    toast.Show();
+
+            //    await Task.Delay(1000);
+            //    var intent = new Intent(this, typeof(LoginActivity));
+            //    StartActivity(intent);
+            //}
         }
+
     }
 }

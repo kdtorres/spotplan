@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_title">spotplan</string>
     <string name="app_main_heading">Welcome to spotplan</string>
     <string name="app_login_heading">SpotPlan Login</string>
     <string name="app_signup_heading">SpotPlan Signup</string>
@@ -17,4 +18,10 @@
     <string name="android_logoname">spotplan</string>
     <string name="android_emailhint">someone@example.com</string>
     <string name="android_texterror">* All fields are required.</string>
+    <string name="app_thumbnail_heading">...</string>
+    
+    
+        <string name="android_cryptolist">Crypto List</string>
+    <string name="android_spotcalcu">Trade Calcu</string>
+    <string name="android_prices">Prices</string>
 </resources>

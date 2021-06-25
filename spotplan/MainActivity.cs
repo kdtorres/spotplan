@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace spotplan
 {
-    [Activity(Label = "@string/app_main_heading", Theme = "@style/Theme.MaterialComponents", MainLauncher = true)]
+    [Activity(Label = "@string/app_main_heading", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -16,9 +16,13 @@ namespace spotplan
             base.OnCreate(savedInstanceState);  
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from layout resource
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.activity_thumbnail);
 
+          
+            var intent = new Intent(this, typeof(MainContentActivity));
+            StartActivity(intent);
 
+            /*
             // Create your application here
             // signup btn
             Button btn = FindViewById<Button>(Resource.Id.btnmain_signup);
@@ -37,7 +41,7 @@ namespace spotplan
                 var intent = new Intent(this, typeof(LoginActivity));
                 await Task.Delay(1000);
                 StartActivity(intent);
-            };
+            };*/
         }
     }
 }

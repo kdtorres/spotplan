@@ -24,9 +24,9 @@ namespace spotplan
             var userlist = (await firebase.Child("Users").OnceAsync<Users>()).Select(item =>
                new Users
                {
-                   UserID = item.Object.UserID,
-                   Firstname = item.Object.Firstname,
-                   Lastname = item.Object.Lastname,
+                   //UserID = item.Object.UserID,
+                   //Firstname = item.Object.Firstname,
+                   //Lastname = item.Object.Lastname,
                    Email = item.Object.Email,
                    Password = item.Object.Password
                }).ToList();
@@ -34,15 +34,21 @@ namespace spotplan
         }
 
 
-        //// get especific users
-        //public static async Task<Users> EspecificUser(Guid userid, string email, string password)
-        //{
-        //    // firebase initialization
-        //    FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
+        // get user method
+        public static async Task<Users> GetUser(string email, string password)
+        {
+         
+            // firebase initialization
+            FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
 
-        //    var user = await UserList();
-        //    await firebase.Child("Users").OnceAsync<Users>();
-        //    return user.Where(a => a.UserID == userid && a.Email == email && a.Password == password).FirstOrDefault();
-        //}
+            var allUsers = await UserList();
+            await firebase.Child("Users").OnceAsync<Users>();
+            return allUsers.Where(a => a.Email == email && a.Password == password).FirstOrDefault();
+        }
+
+        internal static Task GetUser()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

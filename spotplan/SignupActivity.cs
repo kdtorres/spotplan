@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace spotplan
 {
-    [Activity(Label = "@string/app_signup_heading", Theme = "@style/Theme.MaterialComponents")]
+    [Activity(Label = "@string/app_signup_heading", Theme = "@style/AppTheme")]
     public class SignupActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -73,6 +73,9 @@ namespace spotplan
                 Toast toast = Toast.MakeText(ApplicationContext, "Successfully signup!", ToastLength.Short);
                 toast.SetGravity(GravityFlags.CenterHorizontal, 0, 0);
                 toast.Show();
+
+                var intent = new Intent(this, typeof(LoginActivity));
+                StartActivity(intent);
             }
         }
     }

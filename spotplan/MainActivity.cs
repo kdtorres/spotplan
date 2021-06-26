@@ -15,10 +15,7 @@ namespace spotplan
         {
             base.OnCreate(savedInstanceState);  
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            // Set our view from layout resource
-            SetContentView(Resource.Layout.activity_thumbnail);
-
-          
+            
             var intent = new Intent(this, typeof(MainContentActivity));
             StartActivity(intent);
 

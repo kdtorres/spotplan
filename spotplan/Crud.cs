@@ -16,8 +16,7 @@ namespace spotplan
 {
     class Crud
     {
-       public class Crypto
-        {
+       
             // GetAllCrypto method
             public async Task<List<CryptoList>> GetAllCrypto()
             {
@@ -25,7 +24,7 @@ namespace spotplan
                 FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
 
                 return (await firebase
-                    .Child("CryptoList")
+                    .Child("FavorateCrypto")
                     .OnceAsync<CryptoList>()).Select(item => new CryptoList
                     {
                         CryptoID = item.Object.CryptoID,
@@ -40,7 +39,7 @@ namespace spotplan
                 FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
 
                 await firebase
-                    .Child("CryptoList")
+                    .Child("FavorateCrypto")
                     .PostAsync(new CryptoList() { CryptoID = Guid.NewGuid(), CryptoName = name});
             }
 
@@ -52,7 +51,7 @@ namespace spotplan
 
                 var allcrypto = await GetAllCrypto();
                 await firebase
-                    .Child("CryptoList")
+                    .Child("FavorateCrypto")
                     .OnceAsync<CryptoList>();
                 return allcrypto.FirstOrDefault(a => a.CryptoID == cryptoID);
             }
@@ -65,7 +64,7 @@ namespace spotplan
 
                 var allcrypto = await GetAllCrypto();
                 await firebase
-                    .Child("CryptoList")
+                    .Child("FavorateCrypto")
                     .OnceAsync<Person>();
                 return allcrypto.FirstOrDefault(a => a.CryptoName == cryptoName);
             }
@@ -77,11 +76,11 @@ namespace spotplan
                 FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
 
                 var toUpdateCrypto = (await firebase
-                    .Child("CryptoList")
+                    .Child("FavorateCrypto")
                     .OnceAsync<CryptoList>()).FirstOrDefault(a => a.Object.CryptoID == crytoID);
 
                 await firebase
-                    .Child("CryptoList")
+                    .Child("FavorateCrypto")
                     .Child(toUpdateCrypto.Key)
                     .PutAsync(new CryptoList() { CryptoID = crytoID, CryptoName = cryptoName});
             }
@@ -93,10 +92,10 @@ namespace spotplan
                 FirebaseClient firebase = new FirebaseClient("https://spotplan-default-rtdb.firebaseio.com/");
 
                 var toDeleteCrypto = (await firebase
-                    .Child("CryptoList")
+                    .Child("FavorateCrypto")
                     .OnceAsync<CryptoList>()).FirstOrDefault(a => a.Object.CryptoID == cryptoID);
-                await firebase.Child("CryptoList").Child(toDeleteCrypto.Key).DeleteAsync();
+                await firebase.Child("FavorateCrypto").Child(toDeleteCrypto.Key).DeleteAsync();
             }
         }
-    }
+    
 }

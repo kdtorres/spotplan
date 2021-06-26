@@ -19,9 +19,11 @@
     <string name="android_emailhint">someone@example.com</string>
     <string name="android_texterror">* All fields are required.</string>
     <string name="app_thumbnail_heading">...</string>
-    
-    
-        <string name="android_cryptolist">Crypto List</string>
-    <string name="android_spotcalcu">Trade Calcu</string>
-    <string name="android_prices">Prices</string>
+    <string name="app_btnadd">Add</string>
+    <string name="app_btnupdate">Update</string>
+    <string name="app_btndelete">Delete</string>
+    <string name="app_cryptoname">Crypto Name</string>
+    <string name="android_cryptolist">Favorate Crypto</string>
+    <string name="android_spotcalcu">Income Planner</string>
+    <string name="android_prices">Crypto Prices</string>
 </resources>

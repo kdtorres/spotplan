@@ -9,53 +9,61 @@
      android:gravity="center_horizontal">
     <ImageView
         android:src="@drawable/spotplan"
-        android:layout_width="0.0dp"
-        android:layout_height="8.0dp"
+        android:layout_width="239.0dp"
+        android:layout_height="162.0dp"
+        android:layout_marginTop="120px"
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/imageView1"
         android:contentDescription="" />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="47.0dp"
-        android:layout_marginTop="5px"
+        android:layout_height="83.0dp"
+        android:layout_marginTop="50px"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
         <Button
             android:text="@string/android_cryptolist"
-            android:layout_width="319.5dp"
-            android:layout_height="500.5dp"
+            android:layout_width="202.5dp"
+            android:backgroundTint="@android:color/black"
+            android:layout_height="75.0dp"
             android:minWidth="25px"
             android:minHeight="225px"
-            android:id="@+id/btn1" />
+            android:id="@+id/btn1" 
+            android:fontFamily="monospace"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="47.0dp"
+        android:layout_height="77.5dp"
         android:layout_marginTop="5px"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
         <Button
             android:text="@string/android_spotcalcu"
-            android:layout_width="319.5dp"
-            android:layout_height="500.5dp"
+            android:layout_width="202.5dp"
+            android:layout_height="77.0dp"
+            android:backgroundTint="#8dc351"
             android:minWidth="25px"
             android:minHeight="25px"
-            android:id="@+id/btnmain_signup" />
+            android:id="@+id/btn2"
+            android:layout_marginBottom="6.0dp" 
+            android:fontFamily="monospace"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="47.0dp"
+        android:layout_height="75.5dp"
         android:layout_marginTop="5px"
         android:orientation="horizontal"
-        android:gravity="center_horizontal">        
+        android:gravity="center_horizontal">
 
         <Button
             android:text="@string/android_prices"
-            android:layout_width="319.5dp"
-            android:layout_height="500.5dp"
+            android:layout_width="202.5dp"
+            android:layout_height="72.5dp"
             android:minWidth="25px"
+            android:backgroundTint="#26a17b"
             android:minHeight="25px"
-            android:id="@+id/btnmain_signup" />
+            android:id="@+id/btn3" 
+            android:fontFamily="monospace"/>
     </RelativeLayout>
 </LinearLayout>

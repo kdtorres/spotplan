@@ -20,10 +20,20 @@
     <string name="android_texterror">* All fields are required.</string>
     <string name="app_thumbnail_heading">...</string>
     <string name="app_btnadd">Add</string>
+    <string name="android_cryptoid">Crypto ID</string>
+    <string name="android_calculate_income">CALCULATE</string>
     <string name="app_btnupdate">Update</string>
     <string name="app_btndelete">Delete</string>
     <string name="app_cryptoname">Crypto Name</string>
     <string name="android_cryptolist">Favorate Crypto</string>
-    <string name="android_spotcalcu">Income Planner</string>
+    <string name="android_spotcalcu">PNL Planner</string>
     <string name="android_prices">Crypto Prices</string>
+    <string name="android_ep">Crypto Entry Price</string>
+    <string name="android_exp">Crypto Exit Price</string>
+    <string name="android_bid">Your Bid Price</string>
+    <string name="android_strexpectedpnl">The expected PNL (Profit/Loss)</string>
+    <string name="android_des1">1. Entry price (example: your plan entry price of bitcoin is at : 31807.90)</string>
+    <string name="android_des2">2. Exit price (example: your plan exit price of bitcoin is at : 39807.90)</string>
+    <string name="android_des3">3. Your bid price the amount you trade (example: ₱ 2000)</string>
+    <string name="android_des4">The expected PNL (Profit/Loss)</string>
 </resources>

@@ -69,6 +69,7 @@
     <Compile Include="CryptoActivity.cs" />
     <Compile Include="CryptoList.cs" />
     <Compile Include="CryptoPlannerActivity.cs" />
+    <Compile Include="CryptoPriceData.cs" />
     <Compile Include="CryptoPricesActivity.cs" />
     <Compile Include="FavorateCryptoActivity.cs" />
     <Compile Include="Login.cs" />
@@ -126,6 +127,9 @@
     </PackageReference>
     <PackageReference Include="Microcharts">
       <Version>0.9.5.9</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.3.0" />
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.3.0.1" />

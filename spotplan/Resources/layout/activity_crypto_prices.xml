@@ -1,32 +1,116 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#fff"
-    android:orientation="vertical"
-    android:gravity="center_horizontal">
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="172.0dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="@string/android_bid"
+        android:layout_width="wrap_content"
         android:layout_height="0.0dp"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:hint="@string/android_cryptoid"
-        android:id="@+id/textInputEditTextID" />
-    <RelativeLayout
+        android:id="@+id/textView1" />
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
-        android:layout_height="50.0dp"
-        android:layout_marginTop="30px"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="333.5dp"
-            android:layout_height="wrap_content"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:hint="@string/android_cryptoid"
-            android:id="@+id/textInputEditTextID" />
-    </RelativeLayout>
-</LinearLayout>
+        android:layout_height="wrap_content" 
+        android:id="@+id/cardView1">
+
+        <LinearLayout
+            android:id="@+id/priceHistoryLayout"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:layout_margin="16dp"
+                android:text="@string/app_cryptostringprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:background="#e2e2e2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:text="@string/app_cryptostringpriceupdatedstring"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/priceChartLogo"
+                    android:layout_marginRight="12dp"
+                    android:layout_toLeftOf="@+id/priceChartPriceTextView"
+                    android:layout_centerVertical ="true"
+                    android:src="@drawable/btc"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:contentDescription="@string/app_thumbnail_heading" />
+
+                <TextView
+                    android:textColor="#000e39"
+                    android:pointerIcon="hand"
+                    android:id="@+id/priceChartPriceTextView"
+                    android:layout_centerInParent="true"
+                    android:textSize="25sp"
+                    android:text="@string/app_initialprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/priceChartDropDownImage"
+                    android:pointerIcon="hand"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/priceChartPriceTextView"
+                    android:src="@drawable/toggle"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:contentDescription="@string/app_thumbnail_heading" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/chartViewContainer"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Microcharts.Droid.ChartView
+                android:layout_width="match_parent"
+                android:layout_height="140dp" 
+                android:id="@+id/chartView" />
+            </LinearLayout>
+
+         </LinearLayout>
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/priceProgressLayout"   
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:id ="@+id/loader"
+                android:layout_marginEnd="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:indeterminate="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+

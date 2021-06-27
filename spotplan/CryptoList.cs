@@ -13,7 +13,7 @@ namespace spotplan
 {
     class CryptoList
     {
-        public Guid CryptoID { get; set; }
+        public string CryptoID { get; set; }
         public string CryptoName { get; set; }
     }
 }

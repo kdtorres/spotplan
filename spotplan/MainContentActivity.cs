@@ -47,7 +47,7 @@ namespace spotplan
             btn3.Click += async (Sender, e) =>
             {
                 await Task.Delay(1000);
-                var intent = new Intent(this, typeof(SignupActivity));
+                var intent = new Intent(this, typeof(CryptoPricesActivity));
                 StartActivity(intent);
             };
         }

@@ -36,4 +36,8 @@
     <string name="android_des2">2. Exit price (example: your plan exit price of bitcoin is at : 39807.90)</string>
     <string name="android_des3">3. Your bid price the amount you trade (example: ₱ 2000)</string>
     <string name="android_des4">The expected PNL (Profit/Loss)</string>
+    
+    <string name="app_initialprice">$ 0</string>
+    <string name="app_cryptostringprice">Cryptocurrency Prices</string>
+    <string name="app_cryptostringpriceupdatedstring">Updated a few moments ago</string>
 </resources>

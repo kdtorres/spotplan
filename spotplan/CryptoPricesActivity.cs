@@ -35,8 +35,9 @@ namespace spotplan
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.activity_crypto_prices);
 
             chartView = (ChartView)FindViewById(Resource.Id.chartView);
             priceChartPriceTextView = (TextView)FindViewById(Resource.Id.priceChartPriceTextView);
